@@ -117,3 +117,31 @@ hr {
 
 
 }
+footer{
+    width: auto;
+    height: 270px;
+    background: #333333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    
+
+}
+.dados_footer>ul{
+    list-style: none;
+    padding: 0;
+    font-family: Darker Grotesque;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    color: white;
+
+}
+.dados_footer>ul>li{
+    display: flex;
+    gap: 10px;
+}
