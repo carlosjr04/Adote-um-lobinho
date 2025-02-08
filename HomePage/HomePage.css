@@ -7,12 +7,12 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;;
   align-items: center;
   background-color: #85cdf5;
   width: auto;
   height: 130px;
-  gap: 15%;
+  gap: 5%;
 }
 header > a {
   width: 222px;
@@ -241,7 +241,7 @@ hr {
     
 
 }
-.imagem_exemplo>img{
+.imagem_exemplo>a>img{
   position: relative;
     width: 100%;
     bottom: 80%;
@@ -325,7 +325,7 @@ hr {
     
 
 }
-.imagem_exemplo2>img{
+.imagem_exemplo2>a>img{
   position: relative;
     width: 100%;
     bottom: 80%;
