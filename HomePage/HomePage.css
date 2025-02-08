@@ -160,24 +160,68 @@ hr {
   align-items: center;
   justify-content: center;
 }
-.lobo_exemplo{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.lobo_exemplo>h2{
+.titulo_exemplo{
   text-align: center;
   font-family: Darker Grotesque;
   font-size: 48px;
   line-height: 65.09px;
   letter-spacing: 0%;
   color: #DEB959;
+  margin-bottom: 40px;
+}
+.lobo_exemplo{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.lobo_exemplo>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+  gap:60px;
+  
+}
+.texto_exemplo{
+  display: flex;
+  flex-direction: column;
+  
+  width: 461px;
+  height: auto;
+}
+.texto_exemplo>h2{
+  font-family: Darker Grotesque;
+  font-size: 36px;
+  line-height: 48.82px;
+  letter-spacing: 0%;
+
+
+}
+.texto_exemplo>p:nth-child(2){
+  font-family: Darker Grotesque;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  
+
+}
+.texto_exemplo>p:nth-child(3){
+  font-family: Darker Grotesque;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  margin-top: 28px;
 
 }
 .imagem_exemplo{
   position: relative;
-  width: 300px; /* Ajuste para o tamanho desejado */
+  width: 40%; 
   height: auto;
   display: flex;
   justify-content: end;
@@ -190,8 +234,9 @@ hr {
     background-color: #2C5680;
 
     position: absolute;
-    top: 10px;  
-    left: 10px; 
+    bottom: 10%;  
+    right: 8%; 
+    border: 3px solid black;
     z-index: 1;
     
 
@@ -199,12 +244,99 @@ hr {
 .imagem_exemplo>img{
   position: relative;
     width: 100%;
-    z-index: 2; /* Mantém a imagem na frente */
+    bottom: 80%;
+    z-index: 2;
     display: block;
-    transform: scale(0.8);
+    transform: scale(1);
     display: flex;
     
 }
+
+
+.lobo_exemplo2{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;;
+}
+
+.lobo_exemplo2>div{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+  gap:60px;
+  
+}
+.texto_exemplo2{
+  display: flex;
+  flex-direction: column;
+  
+  width: 461px;
+  height: auto;
+}
+.texto_exemplo2>h2{
+  font-family: Darker Grotesque;
+  font-size: 36px;
+  line-height: 48.82px;
+  letter-spacing: 0%;
+
+
+}
+.texto_exemplo2>p:nth-child(2){
+  font-family: Darker Grotesque;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  
+
+}
+.texto_exemplo2>p:nth-child(3){
+  font-family: Darker Grotesque;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  margin-top: 28px;
+
+}
+.imagem_exemplo2{
+  position: relative;
+  width: 40%; 
+  height: auto;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  
+}
+.fundo_azul2{
+  width: 100%;
+    height: 100%;
+    background-color: #2C5680;
+
+    position: absolute;
+    bottom: 10%;  
+    left: 8%; 
+    border: 3px solid black;
+    z-index: 1;
+    
+
+}
+.imagem_exemplo2>img{
+  position: relative;
+    width: 100%;
+    bottom: 80%;
+    z-index: 2;
+    display: block;
+    transform: scale(1);
+    display: flex;
+    
+}
+
+
 footer {
   width: auto;
   height: 270px;
