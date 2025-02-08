@@ -190,3 +190,56 @@ footer{
     letter-spacing: 0%;
 
 }
+.valores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    background: #333333;
+
+}
+.valores>h2{
+    font-family: Darker Grotesque;
+    font-size: 48px;
+    line-height: 65.09px;
+    letter-spacing: 0%;
+    color: #DEB959;
+
+}
+.lista_valores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+}
+.lista_valores>li{
+    width: 195px;
+    height: 428px;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Darker Grotesque;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    gap:10px;
+    color: white;
+}
+.lista_valores>li>figure{
+    width: 190px;
+    height: 190px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
