@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:#85CDF5;
+    width: auto;
+    height: 130px;
+    gap:15%;
+    
+}
+header>a{
+    width: 222px;
+    height: 30px;
+    top: 50px;
+    left: 219px;
+
+    font-family: Darker Grotesque;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    color: #333333;
+}
+
+.lobo_inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: auto;
+    height: 500px;
+    background-image: url("./images/loboinicio.png");
+    background-position: center -380px;
+    color: white;
+}
+
+
+.lobo_inicio>div{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    width: 665px;
+    height: 238px;
+}
+hr {
+    border: none;
+    border-top:  solid white; 
+    
+    margin:14px;
+    width: 99px;
+    height: 5px;
+    
+
+}
+.lobo_inicio>div>h1{
+    width: 630px;
+    height: auto;
+    white-space: nowrap;
+    font-family: Darker Grotesque;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 130.18px;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+.lobo_inicio>div>p{
+    font-family: Darker Grotesque;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.sobre{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: 333px;
+    
+    background: #2C5680;
+
+
+
+}
+.sobre>h2{
+    font-family: Darker Grotesque;
+    font-size: 48px;
+    line-height: 65.09px;
+    letter-spacing: 0%;
+    width: auto;
+    color: #DEB959;
+
+
+}
+.sobre>p{
+    font-family: Darker Grotesque;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32.54px;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 960px;
+    height: 166px;
+    color: white;
+
+
+}
