@@ -1,5 +1,21 @@
 let lobos = JSON.parse(localStorage.getItem('lobos'));
 let paginaatual=0;
+
+let lobosadotados = []
+let opcaoAtivada = false; 
+for(i=0;i<lobos.length;i++){
+    if(lobos[i].adotado===true){
+        lobosadotados.push(lobos[i]);
+    }
+}
+console.log(lobosadotados)
+document.getElementById("checkbox").addEventListener("change", function() {
+    opcaoAtivada = this.checked; 
+    document.querySelector(".lobo_exemplo").innerHTML = ""; 
+    listadelobos();
+});
+
+let loboadotadoindex = 0;
 function listadelobos(){
     for(i=0;i<4;i++){
         let lobo1=0;
@@ -13,7 +29,15 @@ function listadelobos(){
             }else{
                 loboatual = terceirolobo;         
             }
-            const lobodalista = lobos.find(item => item.id === loboatual);
+            let lobodalista =0;
+            if(opcaoAtivada===true){
+                lobodalista = lobosadotados[loboadotadoindex];
+                loboadotadoindex+=1;
+
+            }else{
+                lobodalista = lobos.find(item => item.id === loboatual);
+
+            }
 
             lobo1 =document.createElement("div");
 
@@ -74,7 +98,6 @@ function listadelobos(){
 
             lobo1.append(imagem_exemplo);
             lobo1.append(texto_exemplo);
-            console.log(lobo1)
 
             
         }else{
@@ -161,7 +184,6 @@ function listadelobos(){
 }
 
 function avançar(){
-    console.log(paginaatual)
     if(paginaatual<=250){
         
         paginaatual+=1;
@@ -172,7 +194,6 @@ function avançar(){
     }
 }
 function voltar(){
-    console.log(paginaatual)
     if(paginaatual>0){
         
         paginaatual-=1;
@@ -184,7 +205,6 @@ function voltar(){
     
 }
 function listapaginas(){
-    console.log(paginaatual)
     document.querySelector(".listabotao").innerHTML = "";
     for(i=paginaatual;i<paginaatual+4;i++){
         
@@ -212,3 +232,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.getElementById("avancar").addEventListener("click", avançar);
 document.getElementById("voltar").addEventListener("click", voltar);
+
