@@ -381,6 +381,13 @@ header a:hover::after {
   border: 0;
 }
 
+.botaoatual{
+  
+    background-color: yellow;
+    border: 0;
+  
+}
+
 
 footer {
   width: auto;

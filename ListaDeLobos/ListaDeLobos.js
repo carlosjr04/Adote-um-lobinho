@@ -62,7 +62,7 @@ function listadelobos(){
             nome.innerText = lobodalista.nome;
 
             let idade = document.createElement("p");
-            idade.innerText = lobodalista.idade;
+            idade.innerText = `Idade:${lobodalista.idade}`;
 
             let botao = document.createElement("button");
             botao.innerText = "Adotar";
@@ -206,22 +206,27 @@ function voltar(){
 }
 function listapaginas(){
     document.querySelector(".listabotao").innerHTML = "";
-    for(i=paginaatual;i<paginaatual+4;i++){
+    for(i=paginaatual;i<paginaatual+5;i++){
         
         let listadebotao = document.querySelector(".listabotao");
         let botao = document.createElement("button");
-        botao.innerText = i;
+        botao.innerText = i+1;
         let numbotao=i;
         botao.addEventListener("click", function() {
             paginaatual=numbotao;
+            console.log(paginaatual);
             document.querySelector(".lobo_exemplo").innerHTML = "";
             listapaginas()
             listadelobos();
         })
         botao.classList.add("botaofinal");
         botao.classList.add("botaofinalhover");
+        if(paginaatual===i){
+            botao.classList.add("botaoatual");
+        }
         
         listadebotao.append(botao);
+        
     }
     
 }
