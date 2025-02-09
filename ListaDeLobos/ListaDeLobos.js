@@ -1,5 +1,5 @@
 let lobos = JSON.parse(localStorage.getItem('lobos'));
-let paginaatual=0;
+let paginaatual=1;
 
 let lobosadotados = []
 let opcaoAtivada = false; 
@@ -210,14 +210,15 @@ function listapaginas(){
         
         let listadebotao = document.querySelector(".listabotao");
         let botao = document.createElement("button");
-        botao.innerText = i+1;
+        botao.innerText = i;
         let numbotao=i;
         botao.addEventListener("click", function() {
             paginaatual=numbotao;
-            console.log(paginaatual);
+            
             document.querySelector(".lobo_exemplo").innerHTML = "";
             listapaginas()
             listadelobos();
+            console.log(paginaatual);
         })
         botao.classList.add("botaofinal");
         botao.classList.add("botaofinalhover");
