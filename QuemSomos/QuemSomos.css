@@ -32,6 +32,14 @@ letter-spacing: 0%;
 color: #333333;
 text-decoration: none;
 }
+.lista:hover{
+    color: #deb959;
+    transition: ease-in-out 0.3s;
+  }
+  .qmsomos:hover{
+    color: #deb959;
+    transition: ease-in-out 0.3s;
+  }
 .quemsomos{
     display: flex;
     flex-direction:column;

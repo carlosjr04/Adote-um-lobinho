@@ -27,6 +27,14 @@ header {
     color: #333333;
     text-decoration: none;
   }
+  .lista:hover{
+    color: #deb959;
+    transition: ease-in-out 0.3s;
+  }
+  .qmsomos:hover{
+    color: #deb959;
+    transition: ease-in-out 0.3s;
+  }
 .busca{
     position: relative;
     display: flex;
@@ -91,6 +99,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    margin-top: 60px;
   }
   
   .lobo_exemplo>div{
@@ -112,7 +121,7 @@ header {
   }
   .texto_exemplo>div{
     display: flex;
-    
+    align-items: center;
     gap: 114px;
   }
   .texto_exemplo>div>button{
@@ -221,6 +230,7 @@ header {
   .texto_exemplo2>div{
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     gap: 114px;
   }
   .texto_exemplo2>div>button{
@@ -278,7 +288,7 @@ header {
   
       position: absolute;
       bottom: 10%;  
-      right: 8%; 
+      left: 8%; 
       border: 3px solid black;
       z-index: 1;
       

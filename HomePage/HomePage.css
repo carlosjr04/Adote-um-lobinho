@@ -28,6 +28,14 @@ header > a {
   color: #333333;
   text-decoration: none;
 }
+.lista:hover{
+  color: #deb959;
+  transition: ease-in-out 0.3s;
+}
+.qmsomos:hover{
+  color: #deb959;
+  transition: ease-in-out 0.3s;
+}
 
 .lobo_inicio {
   display: flex;
@@ -167,7 +175,7 @@ hr {
   line-height: 65.09px;
   letter-spacing: 0%;
   color: #DEB959;
-  margin-bottom: 40px;
+  margin-bottom: 73px;
 }
 .lobo_exemplo{
   width: auto;
@@ -184,13 +192,14 @@ hr {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  align-items: flex-end;
+  
   gap:60px;
   
 }
 .texto_exemplo{
   display: flex;
   flex-direction: column;
+  
   
   width: 461px;
   height: auto;
@@ -275,7 +284,7 @@ hr {
 .texto_exemplo2{
   display: flex;
   flex-direction: column;
-  
+  text-align: end;
   width: 461px;
   height: auto;
 }
