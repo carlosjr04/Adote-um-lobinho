@@ -88,6 +88,7 @@ header {
     font-size: 24px;
     line-height: 32.54px;
     letter-spacing: 0%;
+    margin-bottom: 50px;
 
 }
 
@@ -98,17 +99,19 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
-    margin-top: 60px;
+    
+    
   }
   
-  .lobo_exemplo>div{
+  .lobo1{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
    
     gap:60px;
+    margin-bottom: 83px;
+    
     
   }
   .texto_exemplo{
@@ -119,12 +122,12 @@ header {
     width: 461px;
     height: auto;
   }
-  .texto_exemplo>div{
+  .texto{
     display: flex;
     align-items: center;
     gap: 114px;
   }
-  .texto_exemplo>div>button{
+  .adotar_botao{
     width: 130px;
     height: 47px;
 
@@ -139,7 +142,7 @@ header {
     justify-content: center;
     border:0;
   }
-  .texto_exemplo>div>div>h2{
+  .nome{
     font-family: Darker Grotesque;
     font-size: 36px;
     line-height: 48.82px;
@@ -147,7 +150,7 @@ header {
   
   
   }
-  .texto_exemplo>div>div>p:nth-child(2){
+  .idade{
     font-family: Darker Grotesque;
     font-size: 24px;
     line-height: 20px;
@@ -155,7 +158,7 @@ header {
     
   
   }
-  .texto_exemplo>p:nth-child(2){
+  .desc{
     font-family: Darker Grotesque;
     font-size: 24px;
     line-height: 20px;
@@ -186,7 +189,7 @@ header {
       
   
   }
-  .imagem_exemplo>a>img{
+  .imagem{
     position: relative;
       width: 100%;
       bottom: 80%;
@@ -196,8 +199,6 @@ header {
       display: flex;
       
   }
-  
-  
   .lobo_exemplo2{
     width: auto;
     height: auto;
@@ -206,7 +207,15 @@ header {
     justify-content: center;
     align-items: center;
     
-    margin-bottom: 100px;
+    
+  }
+  .lobo2{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+    align-items: center;
+    gap:60px;
+    margin-bottom: 83px;
   }
   
   .lobo_exemplo2>div{
@@ -313,6 +322,28 @@ header {
     gap: 5px;
     margin-bottom: 27px;;
 
+}
+.listabotao{
+  display: flex;
+    justify-content: center;
+    background-color: white;
+    list-style: none;
+    gap: 5px;
+    margin-bottom: 27px;;
+}
+.listabotao>button{
+  background-color: white;
+    border:0;
+}
+.botaofinal{
+  background-color: white;
+    border:0;
+}
+.botaofinalhover:hover{
+  color: rgb(27, 2, 255);
+}
+.listabotao>button:hover{
+  color: rgb(27, 2, 255);
 }
 .paginas>li>button{
     background-color: white;
