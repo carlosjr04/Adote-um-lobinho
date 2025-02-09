@@ -131,12 +131,13 @@ header a:hover::after {
   margin-top: 60px;
 }
 
-.lobo_exemplo>div {
+.lobo1 {
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  margin-top: 30px;
   gap: 60px;
 }
 
@@ -149,13 +150,13 @@ header a:hover::after {
   height: auto;
 }
 
-.texto_exemplo>div {
+.texto {
   display: flex;
   align-items: center;
   gap: 114px;
 }
 
-.texto_exemplo>div>button {
+.adotar_botao {
   width: 130px;
   height: 47px;
 
@@ -171,21 +172,21 @@ header a:hover::after {
   border: 0;
 }
 
-.texto_exemplo>div>div>h2 {
+.nome {
   font-family: Darker Grotesque;
   font-size: 36px;
   line-height: 48.82px;
   letter-spacing: 0%;
 }
 
-.texto_exemplo>div>div>p:nth-child(2) {
+.idade {
   font-family: Darker Grotesque;
   font-size: 24px;
   line-height: 20px;
   letter-spacing: 0%;
 }
 
-.texto_exemplo>p:nth-child(2) {
+.desc {
   font-family: Darker Grotesque;
   font-size: 24px;
   line-height: 20px;
@@ -215,7 +216,7 @@ header a:hover::after {
   z-index: 1;
 }
 
-.imagem_exemplo>a>img {
+.imagem {
   position: relative;
   width: 100%;
   bottom: 80%;
@@ -236,13 +237,14 @@ header a:hover::after {
   margin-bottom: 100px;
 }
 
-.lobo_exemplo2>div {
+.lobo2 {
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
-
+  margin-top: 60px;
   gap: 60px;
 }
 
@@ -254,14 +256,14 @@ header a:hover::after {
   height: auto;
 }
 
-.texto_exemplo2>div {
+.texto2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   gap: 114px;
 }
 
-.texto_exemplo2>div>button {
+.adotar_botao2{
   width: 130px;
   height: 47px;
 
@@ -277,27 +279,27 @@ header a:hover::after {
   border: 0;
 }
 
-.texto_exemplo2>div>div>h2 {
+.nome {
   font-family: Darker Grotesque;
   font-size: 36px;
   line-height: 48.82px;
   letter-spacing: 0%;
 }
 
-.texto_exemplo2>div>div>p:nth-child(2) {
+.idade {
   font-family: Darker Grotesque;
   font-size: 24px;
   line-height: 20px;
   letter-spacing: 0%;
 }
 
-.texto_exemplo2>p:nth-child(2) {
+.desc {
   font-family: Darker Grotesque;
   font-size: 24px;
   line-height: 20px;
   letter-spacing: 0%;
   margin-top: 28px;
-  text-align: end;
+  text-align: start;
 }
 
 .imagem_exemplo2 {
@@ -318,10 +320,10 @@ header a:hover::after {
   bottom: 10%;
   left: 8%;
   border: 3px solid black;
-  z-index: 1;
+  z-index: -3;
 }
 
-.imagem_exemplo2>a>img {
+.imagem2 {
   position: relative;
   width: 100%;
   bottom: 80%;
@@ -330,7 +332,25 @@ header a:hover::after {
   transform: scale(1);
   display: flex;
 }
-
+.nome2{
+  font-family: Darker Grotesque;
+  font-size: 36px;
+  line-height: 48.82px;
+  letter-spacing: 0%;
+}
+.idade2{
+  font-family: Darker Grotesque;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+.desc2{
+  font-family: Darker Grotesque;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: end;
+}
 .paginas {
   display: flex;
   justify-content: center;
@@ -339,15 +359,28 @@ header a:hover::after {
   gap: 5px;
   margin-bottom: 27px;
 }
-
-.paginas>li>button {
+.listabotao{
+  display: flex;
+  background-color: white;
+  gap:3px;
+}
+.botaofinal {
   background-color: white;
   border: 0;
 }
 
-.paginas>li>button:hover {
+.botaofinal:hover {
   color: rgb(27, 2, 255);
 }
+#avancar,#voltar{
+  background-color: white;
+  border: 0;
+}
+#voltar{
+  background-color: white;
+  border: 0;
+}
+
 
 footer {
   width: auto;
