@@ -390,6 +390,7 @@ header a:hover::after {
 
 .botaofinal:hover {
   color: rgb(27, 2, 255);
+  cursor: pointer;
 }
 #avancar,#voltar{
   background-color: white;
@@ -478,4 +479,16 @@ footer {
   font-size: 18px;
   line-height: 24.41px;
   letter-spacing: 0%;
+}
+
+#checkbox:hover{
+  cursor: pointer;
+}
+
+.adotar_botao2:hover {
+  cursor: pointer;
+}
+
+.paginas:hover, .paginas button:hover{
+  cursor: pointer;
 }
