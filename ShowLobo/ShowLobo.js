@@ -97,7 +97,5 @@ function aparecerlobo(){
         
         
         document.addEventListener("DOMContentLoaded", function() {
-    
-            
             aparecerlobo();
         });
