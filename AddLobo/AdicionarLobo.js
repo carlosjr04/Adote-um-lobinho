@@ -27,6 +27,15 @@ function addLobo() {
     emailDono: null,
   });
   localStorage.setItem("lobos", JSON.stringify(lobos));
+  let nomereset = document.querySelector(".texto")
+  let anosLoboreset = document.querySelector(".numero")
+  let urlLoboreset= document.querySelector(".url")
+  let descricaoLoboreset = document.querySelector("#descricao")
+
+  nomereset.value = ""
+  anosLoboreset.value = ""
+  urlLoboreset.value = ""
+  descricaoLoboreset.value = ""
   alert("Lobo adicionado!")
 }
 
