@@ -38,7 +38,7 @@ function aparecerlobo(){
                 window.location.href = "../AdotarLobo/AdotarLobo.html";
                 });
             let excluir = document.createElement("div");
-            excluir.innerText = "excluir"
+            excluir.innerText = "Excluir"
             excluir.addEventListener("click", function() {
                 let idremove= 10000;
                 idremove = lobodalista.id;

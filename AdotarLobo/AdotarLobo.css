@@ -117,21 +117,22 @@
     font-size: 30px;
     line-height: 40.68px;
 }
-    
-  
+
 .nome{
     width: 826px;
     height: 30px;
     border:0;
     border-bottom: 1px solid black;
-    
-
+    padding-left: 1%;
 }
+
+
 .idade{
     width: 72px;
     height: 30px;
     border:0;
     border-bottom: 1px solid black;
+    padding-left: 10%;
     
 
 }
@@ -145,6 +146,7 @@
     justify-content: center;
     align-items: center;
     gap:10px;
+    
 }
 .Email>div{
     display: flex;
@@ -155,7 +157,7 @@
     margin-left: 0.5%;
     margin-top: 10px;
 }
-.email{
+.e-mail{
     width: 915px;
     height: 30px;
     
@@ -163,6 +165,7 @@
     border-bottom: 1px solid black;
     display: flex;
     flex-direction: column;
+    padding-left: 1%;
 }
 .adotar{
     
@@ -185,7 +188,16 @@
     border: 0;
     margin-bottom: 50px;
 }
+#botao_adota:hover{
+  color:aqua;
+  cursor: pointer;
+}
 
+#botao_adota:active{
+  color:greenyellow;
+  background-color: green;
+  cursor: pointer;
+}
 footer {
     width: auto;
     height: 270px;

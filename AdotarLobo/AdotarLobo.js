@@ -1,11 +1,11 @@
-const lobolocal = localStorage.getItem("lobotemp"); 
+const lobolocal = localStorage.getItem("lobotemp");
 let lobos = JSON.parse(localStorage.getItem('lobos'));
 let lobousado = Number(lobolocal)
 lobodalista = lobos.find(item => item.id === lobousado);
 
-function mostrarlobo(){
-    
-    
+function mostrarlobo() {
+
+
     let divmaior = document.createElement("div")
     let imagem = document.createElement("img");
     let texto = document.createElement("div");
@@ -13,12 +13,12 @@ function mostrarlobo(){
     let nomelobo = document.createElement("h1");
     let id = document.createElement("p");
     let idlegal = Number(lobodalista.id)
-    if(idlegal%2!==0){
+    if (idlegal % 2 !== 0) {
         imagem.src = "../images/loboexemplo_menor.png";
-    }else{
+    } else {
         imagem.src = "../images/loboexemplomenor2.png";
     }
-    // oi
+
     imagem.alt = "lobo na floresta";
     nomelobo.innerText = lobodalista.nome;
     id.innerText = `ID:${lobodalista.id}`;
@@ -41,35 +41,37 @@ function mostrarlobo(){
 
 }
 
-function adotarlobo(){
+function adotarlobo() {
     let nomeinput = document.querySelector(".nome");
     let idadeinput = document.querySelector(".idade");
-    let emailinput = document.querySelector(".email");
+    let emailinput = document.querySelector(".e-mail");
 
     let nome = nomeinput.value;
     let idade = idadeinput.value;
     let email = emailinput.value;
-    if(nome==="" || idade==="" || email===""){
+    if (nome === "" || idade === "" || email === "") {
         alert("Digite todos os campos,por favor.")
-    }else{
-        let loboadotado = lobos.findIndex(item => item.id === lobousado);
-        console.log(loboadotado)
-        
-        lobos[loboadotado].nomeDono = nome;
-        
-        lobos[loboadotado].idadeDono = Number(idade);
-        lobos[loboadotado].emailDono = email;
-        lobos[loboadotado].adotado = true;
-        
-        localStorage.setItem("lobos", JSON.stringify(lobos));
-        alert(`Meus parabéns! O lobinho ${lobos[loboadotado].nome} será seu comapnheiro :)`)
-        localStorage.removeItem("lobotemp");
-        window.location.href = "../ListaDeLobos/ListaDeLobos.html";
-
-
+        return;
     }
+
+    let loboadotado = lobos.findIndex(item => item.id === lobousado);
+    console.log(loboadotado)
+
+    lobos[loboadotado].nomeDono = nome;
+
+    lobos[loboadotado].idadeDono = Number(idade);
+    lobos[loboadotado].emailDono = email;
+    lobos[loboadotado].adotado = true;
+
+    localStorage.setItem("lobos", JSON.stringify(lobos));
+    alert(`Meus parabéns! O lobinho ${lobos[loboadotado].nome} será seu comapnheiro :)`)
+    localStorage.removeItem("lobotemp");
+    window.location.href = "../ListaDeLobos/ListaDeLobos.html";
+
+
 }
+
 document.getElementById("botao_adota").addEventListener("click", adotarlobo);
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     mostrarlobo();
 });

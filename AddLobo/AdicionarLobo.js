@@ -6,6 +6,10 @@ function addLobo() {
   let urlLobo = document.querySelector(".url").value;
   let descricaoLobo = document.querySelector("#descricao").value;
   let idfinal=0;
+    if(nomeLobo ==="" || anosLobo === "" || urlLobo ==="" || descricaoLobo ===""){
+      alert("Dados incompletos para o cadastro")
+      return;
+    }
   for ( i = 1; i < lobos.length; i++) { 
     if (lobos.find(item => item.id === i)) { 
         continue;

@@ -101,6 +101,7 @@
     flex-shrink: 0;
     border: 1px solid #333;
     background: #e6e6e6;
+    padding-left: 1%;
   }
   .numero {
     width: 177.14px;
@@ -108,6 +109,7 @@
     flex-shrink: 0;
     border: 1px solid #333;
     background: #e6e6e6;
+    padding-left: 5%;
   }
   .url {
     width: 760.977px;
@@ -115,6 +117,7 @@
     flex-shrink: 0;
     border: 1px solid #333;
     background: #e6e6e6;
+    padding-left: 1%;
   }
   .formulario textarea {
     width: 760.977px;
@@ -122,6 +125,7 @@
     flex-shrink: 0;
     border: 1px solid #333;
     background: #e6e6e6;
+    padding: 1%;
   }
   .formulario button {
     width: 209px;
@@ -136,6 +140,18 @@
     font-weight: 400;
     line-height: normal;
   }
+
+  .formulario button:hover{
+    cursor: pointer;
+    color: aqua;
+  }
+
+  .formulario button:active{
+    cursor: pointer;
+    color: greenyellow;
+    background-color: green;
+  }
+
   footer {
     width: auto;
     height: 270px;

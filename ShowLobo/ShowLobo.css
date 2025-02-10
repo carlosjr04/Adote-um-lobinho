@@ -173,11 +173,13 @@ position: relative;
 
 .adota:hover{
   transform: ease-in-out 0.7s;
-  color: #deb959;
+  color: greenyellow;
+  cursor: pointer;
 }
 .excluir:hover{
   transform: ease-in-out 0.7s;
-  color: #deb959;
+  color: purple;
+  cursor: pointer;
 }
 footer {
     width: auto;

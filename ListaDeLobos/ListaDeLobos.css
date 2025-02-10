@@ -91,6 +91,7 @@ header a:hover::after {
   font-size: 16px;
 
   border-width: 1px;
+  padding-left: 4%;
 }
 
 .busca_botao {
