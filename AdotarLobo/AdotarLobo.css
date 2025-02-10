@@ -93,7 +93,7 @@
 }
 .id{
     font-family: Darker Grotesque;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 18.98px;
     letter-spacing: 0%;
 
@@ -168,7 +168,7 @@
     align-items: center;
     margin-top: 30px;
 }
-.adotar>button{
+#botao_adota{
     width: 209px;
     height: 60px;
     background: #2C5680;

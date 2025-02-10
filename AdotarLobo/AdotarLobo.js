@@ -1,10 +1,8 @@
 const lobolocal = localStorage.getItem("lobotemp"); 
 let lobos = JSON.parse(localStorage.getItem('lobos'));
-console.log(lobolocal);
 let lobousado = Number(lobolocal)
 lobodalista = lobos.find(item => item.id === lobousado);
 
-console.log(lobodalista)
 function mostrarlobo(){
     
     
@@ -14,11 +12,16 @@ function mostrarlobo(){
 
     let nomelobo = document.createElement("h1");
     let id = document.createElement("p");
-
-    imagem.src = "../images/loboexemplo_menor.png";
+    let idlegal = Number(lobodalista.id)
+    if(idlegal%2!==0){
+        imagem.src = "../images/loboexemplo_menor.png";
+    }else{
+        imagem.src = "../images/loboexemplomenor2.png";
+    }
+    
     imagem.alt = "lobo na floresta";
     nomelobo.innerText = lobodalista.nome;
-    id.innerText = lobodalista.id;
+    id.innerText = `ID:${lobodalista.id}`;
 
     divmaior.classList.add("divmaior")
     imagem.classList.add("imagem");
@@ -34,9 +37,37 @@ function mostrarlobo(){
 
     let adote = document.querySelector(".adote");
     adote.append(divmaior)
-    
+
 
 }
+
+function adotarlobo(){
+    let nomeinput = document.querySelector(".nome");
+    let idadeinput = document.querySelector(".idade");
+    let emailinput = document.querySelector(".email");
+
+    let nome = nomeinput.value;
+    let idade = idadeinput.value;
+    let email = emailinput.value;
+    if(nome==="" || idade==="" || email===""){
+        alert("Digite todos os campos,por favor.")
+    }else{
+        let loboadotado = lobos.findIndex(item => item.id === lobousado);
+        console.log(loboadotado)
+        
+        lobos[loboadotado].nomeDono = nome;
+        
+        lobos[loboadotado].idadeDono = Number(idade);
+        lobos[loboadotado].emailDono = email;
+        lobos[loboadotado].adotado = true;
+        
+        localStorage.setItem("lobos", JSON.stringify(lobos));
+        alert(`Meus parabéns! O lobinho ${lobos[loboadotado].nome} será seu comapnheiro :)`)
+        window.location.href = "../ListaDeLobos/ListaDeLobos.html";
+
+    }
+}
+document.getElementById("botao_adota").addEventListener("click", adotarlobo);
 document.addEventListener("DOMContentLoaded", function() {
     mostrarlobo();
 });

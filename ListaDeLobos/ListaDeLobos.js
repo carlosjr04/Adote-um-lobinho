@@ -2,10 +2,16 @@ let lobos = JSON.parse(localStorage.getItem('lobos'));
 let paginaatual=0;
 
 let lobosadotados = []
+let lobosnaoadotados = []
 let opcaoAtivada = false; 
 for(i=0;i<lobos.length;i++){
     if(lobos[i].adotado===true){
         lobosadotados.push(lobos[i]);
+    }
+}
+for(i=0;i<lobos.length;i++){
+    if(lobos[i].adotado===false){
+        lobosnaoadotados.push(lobos[i]);
     }
 }
 
@@ -14,19 +20,19 @@ document.getElementById("checkbox").addEventListener("change", function() {
     document.querySelector(".lobo_exemplo").innerHTML = ""; 
     listadelobos();
 });
-
+console.log(lobosadotados)
+console.log(lobosnaoadotados)
 
 function listadelobos(){
     for(i=0;i<4;i++){
         let lobo1=0;
         let lobo2=0;
         if(i%2==0){
-            let primeirolobo= paginaatual*4+1;
-            let terceirolobo= paginaatual*4+3;
-            if(opcaoAtivada===true){
+            
+            
                  primeirolobo= paginaatual*4;
                  terceirolobo= paginaatual*4+2;
-            }
+            
             
             let loboatual = 0;
             if(i==0){
@@ -41,7 +47,7 @@ function listadelobos(){
                 
 
             }else{
-                lobodalista = lobos.find(item => item.id === loboatual);
+                lobodalista = lobosnaoadotados[loboatual];
             }
 
             lobo1 =document.createElement("div");
@@ -84,6 +90,7 @@ function listadelobos(){
             }else{
                 botao.innerText = "Adotar";
                 botao.addEventListener("click", function() {
+                    localStorage.setItem("lobotemp", loboatual);
                     window.location.href = "../AdotarLobo/AdotarLobo.html"; 
                 });
             }
@@ -123,12 +130,11 @@ function listadelobos(){
 
             
         }else{
-            let primeirolobo= paginaatual*4+2;
-            let terceirolobo= paginaatual*4+4;
-            if(opcaoAtivada===true){
+            
+            
                 primeirolobo=paginaatual*4+1;
                 terceirolobo = paginaatual*4+3;
-            }
+            
             
             let loboatual = 0;
             if(i==1){
@@ -143,7 +149,7 @@ function listadelobos(){
                 
 
             }else{
-                lobodalista2 = lobos.find(item => item.id === loboatual);
+                lobodalista2 = lobosnaoadotados[loboatual];
             }
 
             lobo2 =document.createElement("div");
@@ -188,7 +194,9 @@ function listadelobos(){
             }else{
                 botao2.innerText = "Adotar";
                 botao2.addEventListener("click", function() {
-                alert("Lobo adotado!");
+                    localStorage.setItem("lobotemp", loboatual);
+                    window.location.href = "../AdotarLobo/AdotarLobo.html"; 
+
                 });
             }
             let descricao2 = document.createElement("p");
