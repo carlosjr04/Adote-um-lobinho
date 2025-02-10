@@ -28,7 +28,11 @@ function aparecerlobo() {
     let adota = document.createElement("div");
     adota.innerText = "Adotar";
     adota.addEventListener("click", function () {
-        window.location.href = "../AdotarLobo/AdotarLobo.html";
+        if(lobodalista.adotado === false){
+        window.location.href = "../AdotarLobo/AdotarLobo.html";}
+        else{
+            alert("Esse lobo já está adotado!")
+        }
     });
     let excluir = document.createElement("div");
     excluir.innerText = "Excluir";
