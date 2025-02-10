@@ -108,6 +108,7 @@
     justify-content: center;
     align-items: center;
     gap:10px;
+    margin-bottom: 20px;
 }
 .formulario>div{
     display: flex;
@@ -120,6 +121,7 @@
   
 .nome{
     width: 826px;
+    height: 30px;
     border:0;
     border-bottom: 1px solid black;
     
@@ -127,6 +129,7 @@
 }
 .idade{
     width: 72px;
+    height: 30px;
     border:0;
     border-bottom: 1px solid black;
     
@@ -134,7 +137,7 @@
 }
 .Email{
     width: auto;
-    height: auto;
+    height: 20px;
 
 
     display: flex;
@@ -154,6 +157,8 @@
 }
 .email{
     width: 915px;
+    height: 30px;
+    
     border:0;
     border-bottom: 1px solid black;
     display: flex;
@@ -166,7 +171,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 #botao_adota{
     width: 209px;
