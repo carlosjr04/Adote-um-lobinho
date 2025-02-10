@@ -1,7 +1,7 @@
 const lobolocal = localStorage.getItem("lobotemp"); 
 let lobos = JSON.parse(localStorage.getItem('lobos'));
 let lobousado = Number(lobolocal)
-lobodalista = lobos.find(item => item.id === lobousado);
+lobodalista = lobos.find(item => item.id === lobousado+1);
 
 function mostrarlobo(){
     
