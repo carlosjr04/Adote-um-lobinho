@@ -262,6 +262,7 @@ function listapaginas(){
                 paginaatual=numbotao;
                 let indexbotao = this.getAttribute("data-numero");
                 index_lobosvalidos = Number(indexbotao)
+                document.querySelector(".lobo_exemplo").innerHTML = "";
                 listapaginas()
                 listadelobos();
                 
