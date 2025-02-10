@@ -306,10 +306,125 @@ function listapaginas(){
     
     
 }
+
+function buscar(){
+    let pesquisainput = document.querySelector(".pesquisa");
+    let pesquisa = pesquisainput.value
+    document.querySelector(".lobo_exemplo").innerHTML = "";
+    let nomeminusculo = pesquisa.toLowerCase()
+    let loboescolhido = lobos.find(item => item.nome.toLowerCase() == nomeminusculo)
+    if (loboescolhido === undefined){
+        alert("Não achamos esse lobo :(")
+        let pesquisainputreset = document.querySelector(".pesquisa");
+        pesquisainputreset.value = ""
+        index_lobosvalidos = 0
+        listadelobos()
+    }else{
+        let lobo1 =document.createElement("div");
+
+        let imagem_exemplo = document.createElement("div");
+    
+        let fundo_azul = document.createElement("div");
+    
+        let link_foto = document.createElement("a")
+        link_foto.href = "../ShowLobo/ShowLobo.html";
+        link_foto.addEventListener("click", function() {
+            let loboatualid = loboescolhido.id;
+            localStorage.setItem("lobotemp", loboatualid);
+            window.location.href = "ShowLobo.html"; 
+        })
+        
+        let foto = document.createElement("img")
+        if(loboescolhido.id%2===0){
+            foto.src = "../images/loboexemplo2.png"  
+        }else{
+            foto.src = "../images/loboexemplo.png"
+        }
+        
+        foto.alt = "Lobo na floresta"
+    
+        let texto_exemplo = document.createElement("div");
+    
+        let texto = document.createElement("div");
+    
+        let textodiv = document.createElement("div");
+    
+        let nome = document.createElement("h2");
+        nome.innerText = loboescolhido.nome;
+    
+        let idade = document.createElement("p");
+        idade.innerText = `Idade:${loboescolhido.idade}`;
+    
+        let botao = document.createElement("button");
+        if( opcaoAtivada===true){
+            botao.innerText = "Adotado";
+            botao.addEventListener("click", function() {
+                alert("Lobo já foi adotado!");
+            });
+    
+        }else{
+            botao.innerText = "Adotar";
+            botao.addEventListener("click", function() {
+                localStorage.setItem("lobotemp", loboescolhido.id);
+                
+                window.location.href = "../AdotarLobo/AdotarLobo.html"; 
+            });
+        }
+        
+    
+        let descricao = document.createElement("p");
+        descricao.innerText = loboescolhido.descricao;
+    
+        lobo1.classList.add("lobo1");
+        imagem_exemplo.classList.add("imagem_exemplo");
+        fundo_azul.classList.add("fundo_azul");
+        foto.classList.add("imagem");
+        texto_exemplo.classList.add("texto_exemplo");
+        texto.classList.add("texto");
+        nome.classList.add("nome");
+        idade.classList.add("idade");
+        if( opcaoAtivada===true){
+            botao.classList.add("adotado_botao");
+        }else{
+            botao.classList.add("adotar_botao2");
+        }
+        descricao.classList.add("desc")
+    
+        link_foto.append(foto);
+        imagem_exemplo.append(fundo_azul);
+        imagem_exemplo.append(link_foto);
+        
+        textodiv.append(nome);
+        textodiv.append(idade);
+        texto.append(textodiv);
+        texto.append(botao);
+        texto_exemplo.append(texto);
+        texto_exemplo.append(descricao);
+    
+        lobo1.append(imagem_exemplo);
+        lobo1.append(texto_exemplo);
+        let divexiste = document.querySelector(".lobo_exemplo");
+        divexiste.appendChild(lobo1);
+    
+        let pesquisainputreset = document.querySelector(".pesquisa");
+        pesquisainputreset.value = ""
+    }
+    
+   
+
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     
     listapaginas();
     listadelobos();
+});
+document.getElementById("busca_botao").addEventListener("click", buscar);
+document.getElementById("pesquisainput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); 
+        buscar()
+    }
 });
 document.getElementById("avancar").addEventListener("click", avançar);
 document.getElementById("voltar").addEventListener("click", voltar);

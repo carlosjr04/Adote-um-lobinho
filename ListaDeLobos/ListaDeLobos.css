@@ -94,7 +94,7 @@ header a:hover::after {
   padding-left: 4%;
 }
 
-.busca_botao {
+#busca_botao {
   position: relative;
   display: flex;
   left: 3.8%;
@@ -102,7 +102,7 @@ header a:hover::after {
   border: 0;
 }
 
-.busca_botao:hover {
+#busca_botao:hover {
   cursor: pointer;
 }
 
