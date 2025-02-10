@@ -39,8 +39,7 @@ function listadelobos() {
   let link_foto = document.createElement("a");
   link_foto.href = "../ShowLobo/ShowLobo.html";
   link_foto.addEventListener("click", function () {
-    let loboatual = lobodalista.id;
-    localStorage.setItem("lobotemp", loboatual);
+    localStorage.setItem("lobotemp", primeirolobo.id);
     window.location.href = "ShowLobo.html";
   });
 
