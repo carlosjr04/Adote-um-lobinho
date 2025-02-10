@@ -289,7 +289,7 @@ hr {
   margin-bottom: 100px;;
 }
 
-.lobo_exemplo2>div{
+.engloba2{
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -305,7 +305,7 @@ hr {
   width: 461px;
   height: auto;
 }
-.texto_exemplo2>h2{
+.nome2{
   font-family: Darker Grotesque;
   font-size: 36px;
   line-height: 48.82px;
@@ -313,7 +313,7 @@ hr {
 
 
 }
-.texto_exemplo2>p:nth-child(2){
+.idade2{
   font-family: Darker Grotesque;
   font-size: 24px;
   line-height: 20px;
@@ -321,7 +321,7 @@ hr {
   
 
 }
-.texto_exemplo2>p:nth-child(3){
+.descricao2{
   font-family: Darker Grotesque;
   font-size: 24px;
   line-height: 20px;
@@ -331,7 +331,7 @@ hr {
 }
 .imagem_exemplo2{
   position: relative;
-  width: 40%; 
+  width: 40%;
   height: auto;
   display: flex;
   justify-content: end;
@@ -340,18 +340,15 @@ hr {
 }
 .fundo_azul2{
   width: 100%;
-    height: 100%;
-    background-color: #2C5680;
-
-    position: absolute;
-    bottom: 10%;  
-    left: 8%; 
-    border: 3px solid black;
-    z-index: 1;
-    
-
+  height: 100%;
+  background-color: #2C5680;
+  position: absolute;
+  bottom: 10%;
+  left: 8%;
+  border: 3px solid black;
+  z-index: 1;
 }
-.imagem_exemplo2>a>img{
+.imagem2{
   position: relative;
     width: 100%;
     bottom: 80%;
