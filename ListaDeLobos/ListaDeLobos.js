@@ -52,6 +52,11 @@ function listadelobos(){
 
             let link_foto = document.createElement("a")
             link_foto.href = "../ShowLobo/ShowLobo.html";
+            link_foto.addEventListener("click", function() {
+                let loboatual = lobodalista.id;
+                localStorage.setItem("lobotemp", loboatual);
+                window.location.href = "ShowLobo.html"; 
+            })
             
             let foto = document.createElement("img")
             foto.src = "../images/loboexemplo.png"
@@ -149,6 +154,12 @@ function listadelobos(){
 
             let link_foto2 = document.createElement("a")
             link_foto2.href = "../ShowLobo/ShowLobo.html";
+            link_foto2.addEventListener("click", function() {
+                let loboatual = lobodalista2.id;
+                localStorage.setItem("lobotemp", loboatual); // Salva a variável no armazenamento local
+                window.location.href = "ShowLobo.html"; 
+            })
+            
             
             let foto2 = document.createElement("img")
             foto2.src = "../images/loboexemplo2.png"

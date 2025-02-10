@@ -63,7 +63,7 @@ header a:hover::after {
     margin-top: 50px;
     margin-bottom: 83px;
 }
-.lobo_exemplo{
+.lobo1{
     width: auto;
     height: auto;
     display: flex;
@@ -73,7 +73,7 @@ header a:hover::after {
     margin-bottom: 100px;
 }
 
-.lobo_exemplo>div{
+.lobo_exemplo{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -121,7 +121,7 @@ header a:hover::after {
     
 
 }
-.imagem_exemplo>img{
+.imagem{
 position: relative;
     width: 100%;
     bottom: 80%;
@@ -137,7 +137,7 @@ position: relative;
     justify-content: center;
     gap: 110px;
 }
-.botao_adocao>button:nth-child(1){
+.adota{
     width: 180px;
     height: 56px;
     background: #7AAC3A;
@@ -148,11 +148,13 @@ position: relative;
     letter-spacing: 0%;
     text-align: center;
     color: white;
-    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
 }
-.botao_adocao>button:nth-child(2){
+.excluir{
     width: 180px;
     height: 56px;
     background: #DE5959;
@@ -163,8 +165,19 @@ position: relative;
     letter-spacing: 0%;
     text-align: center;
     color: white;
-    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+
+.adota:hover{
+  transform: ease-in-out 0.7s;
+  color: #deb959;
+}
+.excluir:hover{
+  transform: ease-in-out 0.7s;
+  color: #deb959;
 }
 footer {
     width: auto;
