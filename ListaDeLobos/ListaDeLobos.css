@@ -171,6 +171,25 @@ header a:hover::after {
   justify-content: center;
   border: 0;
 }
+.adotado_botao{
+  
+  width: 157px;
+  height: 51px;
+
+
+
+  font-family: Darker Grotesque;
+  font-size: 36px;
+  line-height: 48.82px;
+  letter-spacing: 0%;
+  background: #7AAC3A;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
 
 .nome {
   font-family: Darker Grotesque;
@@ -383,7 +402,8 @@ header a:hover::after {
 
 .botaoatual{
   
-    background-color: yellow;
+  background: #DEB959;
+
     border: 0;
   
 }
