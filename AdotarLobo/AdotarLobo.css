@@ -61,14 +61,14 @@
     margin-bottom: 50px;
     gap:50px;
 }
-.adote>figure>img{
+.imagem{
     width: 200px;
     height: 200px;
     border-radius: 50%;
     top:40px;
     
 }
-.adote>div>h1{
+.nomelobo{
     font-family: Darker Grotesque;
     font-size: 60px;
     line-height: 81.36px;
@@ -76,7 +76,22 @@
     white-space: nowrap;
 
 }
-.adote>div>p{
+.divmaior{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 915px;
+  height: auto;
+  justify-content: flex-end;
+  gap:10%
+
+}
+.texto{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+.id{
     font-family: Darker Grotesque;
     font-size: 14px;
     line-height: 18.98px;

@@ -8,14 +8,14 @@ for(i=0;i<lobos.length;i++){
         lobosadotados.push(lobos[i]);
     }
 }
-console.log(lobosadotados)
+
 document.getElementById("checkbox").addEventListener("change", function() {
     opcaoAtivada = this.checked; 
     document.querySelector(".lobo_exemplo").innerHTML = ""; 
     listadelobos();
 });
 
-let loboadotadoindex = 0;
+
 function listadelobos(){
     for(i=0;i<4;i++){
         let lobo1=0;
@@ -36,7 +36,7 @@ function listadelobos(){
             }
             let lobodalista =0;
             if(opcaoAtivada===true){
-                console.log(loboatual)
+                
                 lobodalista = lobosadotados[loboatual];
                 
 
@@ -78,13 +78,13 @@ function listadelobos(){
             if( opcaoAtivada===true){
                 botao.innerText = "Adotado";
                 botao.addEventListener("click", function() {
-                alert("Lobo já foi adotado!");
+                    alert("Lobo já foi adotado!");
                 });
 
             }else{
                 botao.innerText = "Adotar";
                 botao.addEventListener("click", function() {
-                alert("Lobo adotado!");
+                    window.location.href = "../AdotarLobo/AdotarLobo.html"; 
                 });
             }
             
@@ -259,7 +259,6 @@ function voltar(){
     
 }
 function listapaginas(){
-    console.log(paginaatual)
     document.querySelector(".listabotao").innerHTML = "";
     if(paginaatual>=0 && paginaatual<=2 ){
         for(i=0;i<5;i++){

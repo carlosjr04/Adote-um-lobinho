@@ -5,7 +5,7 @@ console.log(lobos)
 let loboatual = Number(lobolocal);
 console.lo
 let lobodalista = lobos.find(item => item.id === loboatual);
-console.log(lobodalista); 
+
 function aparecerlobo(){      
             
 
@@ -83,7 +83,7 @@ function aparecerlobo(){
             
             let divexiste = document.querySelector(".lobo_final");
             divexiste.appendChild(lobo1);
-            localStorage.removeItem("lobotemp");
+            
 
             let nome =document.createElement("h2");
             nome.innerText = lobodalista.nome;
