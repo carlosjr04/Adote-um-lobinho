@@ -22,6 +22,20 @@ document.getElementById("checkbox").addEventListener("change", function() {
 });
 console.log(lobosadotados)
 console.log(lobosnaoadotados)
+let index_lobosvalidos = 0;
+function pegarid() {
+    let lobovalido = 0
+    if(opcaoAtivada===true){
+                
+        lobovalido = lobosadotados[index_lobosvalidos];
+        index_lobosvalidos+=1
+        return lobovalido
+    }else{
+        lobovalido = lobosnaoadotados[index_lobosvalidos];
+        index_lobosvalidos+=1
+        return lobovalido
+    }
+}
 
 function listadelobos(){
     for(i=0;i<4;i++){
@@ -30,25 +44,10 @@ function listadelobos(){
         if(i%2==0){
             
             
-                 primeirolobo= paginaatual*4;
-                 terceirolobo= paginaatual*4+2;
+                 
+            let lobodalista =pegarid();
             
             
-            let loboatual = 0;
-            if(i==0){
-                loboatual = primeirolobo;
-            }else{
-                loboatual = terceirolobo;         
-            }
-            let lobodalista =0;
-            if(opcaoAtivada===true){
-                
-                lobodalista = lobosadotados[loboatual];
-                
-
-            }else{
-                lobodalista = lobosnaoadotados[loboatual];
-            }
 
             lobo1 =document.createElement("div");
 
@@ -59,8 +58,8 @@ function listadelobos(){
             let link_foto = document.createElement("a")
             link_foto.href = "../ShowLobo/ShowLobo.html";
             link_foto.addEventListener("click", function() {
-                let loboatual = lobodalista.id;
-                localStorage.setItem("lobotemp", loboatual);
+                let loboatualid = lobodalista.id;
+                localStorage.setItem("lobotemp", loboatualid);
                 window.location.href = "ShowLobo.html"; 
             })
             
@@ -90,7 +89,7 @@ function listadelobos(){
             }else{
                 botao.innerText = "Adotar";
                 botao.addEventListener("click", function() {
-                    localStorage.setItem("lobotemp", loboatual);
+                    localStorage.setItem("lobotemp", lobodalista.id);
                     window.location.href = "../AdotarLobo/AdotarLobo.html"; 
                 });
             }
@@ -130,27 +129,7 @@ function listadelobos(){
 
             
         }else{
-            
-            
-                primeirolobo=paginaatual*4+1;
-                terceirolobo = paginaatual*4+3;
-            
-            
-            let loboatual = 0;
-            if(i==1){
-                loboatual = primeirolobo;
-            }else{
-                loboatual = terceirolobo;         
-            }
-            let lobodalista2=0;
-            if(opcaoAtivada===true){
-                console.log(loboatual)
-                lobodalista2 = lobosadotados[loboatual];
-                
-
-            }else{
-                lobodalista2 = lobosnaoadotados[loboatual];
-            }
+            let lobodalista2 =pegarid();
 
             lobo2 =document.createElement("div");
 
@@ -161,8 +140,8 @@ function listadelobos(){
             let link_foto2 = document.createElement("a")
             link_foto2.href = "../ShowLobo/ShowLobo.html";
             link_foto2.addEventListener("click", function() {
-                let loboatual = lobodalista2.id;
-                localStorage.setItem("lobotemp", loboatual); // Salva a variável no armazenamento local
+                let loboatualid = lobodalista2.id;
+                localStorage.setItem("lobotemp", loboatualid); // Salva a variável no armazenamento local
                 window.location.href = "ShowLobo.html"; 
             })
             
@@ -194,7 +173,7 @@ function listadelobos(){
             }else{
                 botao2.innerText = "Adotar";
                 botao2.addEventListener("click", function() {
-                    localStorage.setItem("lobotemp", loboatual);
+                    localStorage.setItem("lobotemp", lobodalista2.id);
                     window.location.href = "../AdotarLobo/AdotarLobo.html"; 
 
                 });

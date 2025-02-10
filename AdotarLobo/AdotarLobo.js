@@ -1,7 +1,7 @@
 const lobolocal = localStorage.getItem("lobotemp"); 
 let lobos = JSON.parse(localStorage.getItem('lobos'));
 let lobousado = Number(lobolocal)
-lobodalista = lobos.find(item => item.id === lobousado+1);
+lobodalista = lobos.find(item => item.id === lobousado);
 
 function mostrarlobo(){
     
@@ -63,7 +63,9 @@ function adotarlobo(){
         
         localStorage.setItem("lobos", JSON.stringify(lobos));
         alert(`Meus parabéns! O lobinho ${lobos[loboadotado].nome} será seu comapnheiro :)`)
+        localStorage.removeItem("lobotemp");
         window.location.href = "../ListaDeLobos/ListaDeLobos.html";
+
 
     }
 }
