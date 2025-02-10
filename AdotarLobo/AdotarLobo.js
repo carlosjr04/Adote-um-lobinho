@@ -18,7 +18,7 @@ function mostrarlobo(){
     }else{
         imagem.src = "../images/loboexemplomenor2.png";
     }
-    
+    // oi
     imagem.alt = "lobo na floresta";
     nomelobo.innerText = lobodalista.nome;
     id.innerText = `ID:${lobodalista.id}`;
