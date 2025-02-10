@@ -87,7 +87,7 @@
     gap: 20px;
   }
   
-  form p {
+  .formulario p {
     color: #000;
     font-family: "Darker Grotesque";
     font-size: 30px;
@@ -116,14 +116,14 @@
     border: 1px solid #333;
     background: #e6e6e6;
   }
-  form textarea {
+  .formulario textarea {
     width: 760.977px;
     height: 250px;
     flex-shrink: 0;
     border: 1px solid #333;
     background: #e6e6e6;
   }
-  form button {
+  .formulario button {
     width: 209px;
     height: 60px;
     flex-shrink: 0;

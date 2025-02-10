@@ -5,8 +5,18 @@ function addLobo() {
   let anosLobo = parseInt(document.querySelector(".numero").value);
   let urlLobo = document.querySelector(".url").value;
   let descricaoLobo = document.querySelector("#descricao").value;
+  let idfinal=0;
+  for ( i = 1; i < lobos.length; i++) { 
+    if (lobos.find(item => item.id === i)) { 
+        continue;
+    }else{
+        idfinal = i;
+        break;
+    }
+}
+  
   lobos.push({
-    id: lobos.length + 1,
+    id: idfinal,
     nome: nomeLobo,
     idade: anosLobo,
     descricao: descricaoLobo,
@@ -16,7 +26,8 @@ function addLobo() {
     idadeDono: null,
     emailDono: null,
   });
-  localStorage.setItem("lobos", JSON.stringify(lobos)); //salva no local storage
+  localStorage.setItem("lobos", JSON.stringify(lobos));
+  alert("Lobo adicionado!")
 }
 
 let salvar = document.querySelector("#salvar");
