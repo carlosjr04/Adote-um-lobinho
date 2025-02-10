@@ -194,7 +194,7 @@ hr {
   color: #DEB959;
   margin-bottom: 73px;
 }
-.lobo_exemplo{
+.lobo_exemplo1{
   width: auto;
   height: auto;
   display: flex;
@@ -204,7 +204,7 @@ hr {
   margin-bottom: 100px;
 }
 
-.lobo_exemplo>div{
+.engloba{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -221,7 +221,7 @@ hr {
   width: 461px;
   height: auto;
 }
-.texto_exemplo>h2{
+.nome{
   font-family: Darker Grotesque;
   font-size: 36px;
   line-height: 48.82px;
@@ -229,7 +229,7 @@ hr {
 
 
 }
-.texto_exemplo>p:nth-child(2){
+.idade{
   font-family: Darker Grotesque;
   font-size: 24px;
   line-height: 20px;
@@ -237,7 +237,7 @@ hr {
   
 
 }
-.texto_exemplo>p:nth-child(3){
+.descricao{
   font-family: Darker Grotesque;
   font-size: 24px;
   line-height: 20px;
@@ -267,7 +267,7 @@ hr {
     
 
 }
-.imagem_exemplo>a>img{
+.imagem {
   position: relative;
     width: 100%;
     bottom: 80%;
