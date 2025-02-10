@@ -16,8 +16,7 @@ for(i=0;i<lobos.length;i++){
 }
 
 
-console.log(lobosadotados)
-console.log(lobosnaoadotados)
+
 let index_lobosvalidos = 0;
 document.getElementById("checkbox").addEventListener("change", function() {
     opcaoAtivada = this.checked; 
@@ -258,7 +257,7 @@ function listapaginas(){
             botao.innerText = i+1;
             let numbotao=i;
             botao.setAttribute("data-numero", 4*i);
-            console.log(`valor botao ${botao.getAttribute("data-numero")}`)
+            
             botao.addEventListener("click", function() {
                 paginaatual=numbotao;
                 let indexbotao = this.getAttribute("data-numero");
