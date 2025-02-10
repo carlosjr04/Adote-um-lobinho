@@ -15,14 +15,16 @@ for(i=0;i<lobos.length;i++){
     }
 }
 
-document.getElementById("checkbox").addEventListener("change", function() {
-    opcaoAtivada = this.checked; 
-    document.querySelector(".lobo_exemplo").innerHTML = ""; 
-    listadelobos();
-});
+
 console.log(lobosadotados)
 console.log(lobosnaoadotados)
 let index_lobosvalidos = 0;
+document.getElementById("checkbox").addEventListener("change", function() {
+    opcaoAtivada = this.checked; 
+    document.querySelector(".lobo_exemplo").innerHTML = ""; 
+    index_lobosvalidos = 0;
+    listadelobos();
+});
 function pegarid() {
     let lobovalido = 0
     if(opcaoAtivada===true){
@@ -39,6 +41,7 @@ function pegarid() {
 
 function listadelobos(){
     for(i=0;i<4;i++){
+        console.log(index_lobosvalidos)
         let lobo1=0;
         let lobo2=0;
         if(i%2==0){
@@ -236,7 +239,7 @@ function avançar(){
 }
 function voltar(){
     if(paginaatual>0){
-        
+        index_lobosvalidos-=8
         paginaatual-=1;
         listapaginas();
         document.querySelector(".lobo_exemplo").innerHTML = "";
@@ -254,10 +257,12 @@ function listapaginas(){
             let botao = document.createElement("button");
             botao.innerText = i+1;
             let numbotao=i;
+            botao.setAttribute("data-numero", 4*i);
+            console.log(`valor botao ${botao.getAttribute("data-numero")}`)
             botao.addEventListener("click", function() {
                 paginaatual=numbotao;
-                
-                document.querySelector(".lobo_exemplo").innerHTML = "";
+                let indexbotao = this.getAttribute("data-numero");
+                index_lobosvalidos = Number(indexbotao)
                 listapaginas()
                 listadelobos();
                 
@@ -278,9 +283,11 @@ function listapaginas(){
             let botao = document.createElement("button");
             botao.innerText = i+1;
             let numbotao=i;
+            botao.setAttribute("data-numero", 4*i);
             botao.addEventListener("click", function() {
                 paginaatual=numbotao;
-                
+                let indexbotao = this.getAttribute("data-numero");
+                index_lobosvalidos = Number(indexbotao)
                 document.querySelector(".lobo_exemplo").innerHTML = "";
                 listapaginas()
                 listadelobos();
