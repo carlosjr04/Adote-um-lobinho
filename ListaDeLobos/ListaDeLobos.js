@@ -321,7 +321,12 @@ function buscar(){
     }
     
     if (loboescolhido === undefined){
-        alert("Não achamos esse lobo :(")
+        if(opcaoAtivada===true){
+            alert(`O lobo ${pesquisa} não está no banco de dados ou ele não foi adotado ainda`)
+        }else{
+            alert(`O lobo ${pesquisa} não está no banco de dados ou ele já foi adotado `)
+        }
+        
         let pesquisainputreset = document.querySelector(".pesquisa");
         pesquisainputreset.value = ""
         index_lobosvalidos = 0
