@@ -259,6 +259,7 @@ function listapaginas(){
             botao.setAttribute("data-numero", 4*i);
             
             botao.addEventListener("click", function() {
+                window.scrollTo({top:0,behavior:"smooth"})
                 paginaatual=numbotao;
                 let indexbotao = this.getAttribute("data-numero");
                 index_lobosvalidos = Number(indexbotao)
@@ -312,7 +313,13 @@ function buscar(){
     let pesquisa = pesquisainput.value
     document.querySelector(".lobo_exemplo").innerHTML = "";
     let nomeminusculo = pesquisa.toLowerCase()
-    let loboescolhido = lobos.find(item => item.nome.toLowerCase() == nomeminusculo)
+    let loboescolhido=0
+    if(opcaoAtivada===true){
+        loboescolhido = lobosadotados.find(item => item.nome.toLowerCase() == nomeminusculo)
+    }else{
+         loboescolhido = lobosnaoadotados.find(item => item.nome.toLowerCase() == nomeminusculo)
+    }
+    
     if (loboescolhido === undefined){
         alert("Não achamos esse lobo :(")
         let pesquisainputreset = document.querySelector(".pesquisa");
