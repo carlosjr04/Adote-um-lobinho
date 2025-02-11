@@ -80,13 +80,18 @@ header a:hover::after {
   text-decoration: none;
 }
 
-.add_lobo:hover {
+.add_lobo:hover, .adotar_botao2:hover{
   cursor: pointer;
-  color: #e7ddc2;
+  color: #ddda27;
 }
 .add_lobo:active{
+  background-color: rgb(132, 145, 23);
+  color: yellow;
+} 
+
+.adotar_botao2:active{
   background-color: rgb(49, 204, 49);
-  color: #679728;
+  color: greenyellow;
 }
 
 .pesquisa {
@@ -488,10 +493,6 @@ footer {
 }
 
 #checkbox:hover{
-  cursor: pointer;
-}
-
-.adotar_botao2:hover {
   cursor: pointer;
 }
 
