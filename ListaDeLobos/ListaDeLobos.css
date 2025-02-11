@@ -82,6 +82,11 @@ header a:hover::after {
 
 .add_lobo:hover {
   cursor: pointer;
+  color: #e7ddc2;
+}
+.add_lobo:active{
+  background-color: rgb(49, 204, 49);
+  color: #679728;
 }
 
 .pesquisa {
