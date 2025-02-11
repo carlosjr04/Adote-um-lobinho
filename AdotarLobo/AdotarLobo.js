@@ -1,14 +1,20 @@
 const lobolocal = localStorage.getItem("lobotemp");
 
 let lobos = JSON.parse(localStorage.getItem('lobos'));
-let donos = JSON.parse(localStorage.getItem('donos'));
-localStorage.setItem("donos", JSON.stringify([]))
+let donos=0
+if(JSON.parse(localStorage.getItem('donos')) ===null){
+    localStorage.setItem("donos", JSON.stringify([]))
+}else{
+    donos = JSON.parse(localStorage.getItem('donos'));
+}
+
+
 let lobousado = Number(lobolocal)
 lobodalista = lobos.find(item => item.id === lobousado);
 
 function mostrarlobo() {
 
-
+    
     let divmaior = document.createElement("div")
     let imagem = document.createElement("img");
     let texto = document.createElement("div");
