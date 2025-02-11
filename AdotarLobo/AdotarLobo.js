@@ -2,7 +2,7 @@ const lobolocal = localStorage.getItem("lobotemp");
 
 let lobos = JSON.parse(localStorage.getItem('lobos'));
 let donos = JSON.parse(localStorage.getItem('donos'));
-localStorage.setItem("donos")
+localStorage.setItem("donos", JSON.stringify([]))
 let lobousado = Number(lobolocal)
 lobodalista = lobos.find(item => item.id === lobousado);
 
