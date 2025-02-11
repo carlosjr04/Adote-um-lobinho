@@ -1,5 +1,6 @@
 const lobolocal = localStorage.getItem("lobotemp");
 let lobos = JSON.parse(localStorage.getItem('lobos'));
+let donos = JSON.parse(localStorage.getItem('donos'));
 let lobousado = Number(lobolocal)
 lobodalista = lobos.find(item => item.id === lobousado);
 
@@ -63,6 +64,14 @@ function adotarlobo() {
     lobos[loboadotado].emailDono = email;
     lobos[loboadotado].adotado = true;
 
+    donos.push({
+        loboadotado: lobos[loboadotado],
+        nomeDono: nome,
+        idadeDono:  Number(idade),
+        emailDono: email,
+      });
+
+    localStorage.setItem("donos", JSON.stringify(donos));
     localStorage.setItem("lobos", JSON.stringify(lobos));
     alert(`Meus parabéns! O lobinho ${lobos[loboadotado].nome} será seu comapnheiro :)`)
     localStorage.removeItem("lobotemp");
