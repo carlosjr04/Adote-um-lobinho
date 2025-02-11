@@ -61,12 +61,26 @@ header a:hover::after {
 
   width: auto;
   height: 500px;
-  background-image: url("../images/loboinicio.png");
-  background-position: center -380px;
+  
   color: white;
 }
+.foto_lobo{
+  position: relative;
+  width: 100%;
+    height: 100%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.foto_lobo>img{
+  position: absolute;
+  width: 100%;
+  margin-bottom: 20%;
+  z-index: -4;
+}
 
-.lobo_inicio > div {
+.lobo_inicio >div> div {
   display: flex;
   flex-direction: column;
 
@@ -83,7 +97,7 @@ hr {
   width: 99px;
   height: 5px;
 }
-.lobo_inicio > div > h1 {
+.lobo_inicio > div>div > h1 {
   width: 630px;
   height: auto;
   white-space: nowrap;
@@ -94,7 +108,7 @@ hr {
   letter-spacing: 0%;
   text-align: center;
 }
-.lobo_inicio > div > p {
+.lobo_inicio > div>div > p {
   font-family: Darker Grotesque;
   font-weight: 400;
   font-size: 30px;
