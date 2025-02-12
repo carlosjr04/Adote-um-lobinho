@@ -143,7 +143,7 @@ function listadelobos(){
             link_foto2.href = "../ShowLobo/ShowLobo.html";
             link_foto2.addEventListener("click", function() {
                 let loboatualid = lobodalista2.id;
-                localStorage.setItem("lobotemp", loboatualid); // Salva a variável no armazenamento local
+                localStorage.setItem("lobotemp", loboatualid); 
                 window.location.href = "ShowLobo.html"; 
             })
             
