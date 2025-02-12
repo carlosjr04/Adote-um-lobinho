@@ -287,6 +287,7 @@ function listapaginas(){
             botao.setAttribute("data-numero", 4*i);
             botao.addEventListener("click", function() {
                 paginaatual=numbotao;
+                window.scrollTo({top:0,behavior:"smooth"})
                 let indexbotao = this.getAttribute("data-numero");
                 index_lobosvalidos = Number(indexbotao)
                 document.querySelector(".lobo_exemplo").innerHTML = "";
